@@ -1,77 +1,72 @@
 {% extends 'core/layout.html' %}
 {% load static %}
 {% block content %}
-    <div class="list-container mt-5">
-        <center>
-            <h1>Make an order :)</h1>
-            <form class="form-floating mt-3">
-                <input type="text" class="form-control" id="name" placeholder="Name">
-                <label for="name">Your name</label>
-            </form>
-            <div class="form-floating mt-3">
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                <label for="email">Your e-mail</label>
+
+<div class="container-products">
+
+    <h1 class="donuts-par" href="#">DONUTS</h1>
+
+    <div class="row">
+
+        <div class="col-product">
+            <div class="product__card" data-id="0">
+                <center>
+                    <div class="image-wrapper">
+<!--                        <img class="image-shadow" src="{% static 'core/img/berry.png' %}">-->
+                        <img class="image-real" src="{% static 'core/img/berry.png' %}" alt="berry">
+                    </div>
+                </center>
+
+                <div class="descriprion-wrapper">
+                    <p class="product-name">BERRY DONUT</p>
+                    <p class="product-description">Bright pink donut with mixed berry filling.
+                        The taste of ripe berries will awaken a feeling of joy and carefreeness.</p>
+                </div>
+                <div class="price">
+                    <div class="counter-wrapper">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                    </div>
+                    <p>100₽</p>
+                </div>
+                <div class="add-to-cart">
+                    <button href="#">ADD TO MY CART</button>
+                </div>
             </div>
+        </div>
 
-            <div class="row mt-3">
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <img src="{% static 'core/img/espresso.jpg' %}" alt="espresso"><br>
-                        <label for="rangeEspresso">Espresso</label><br>
-                        <input type="number" min="0" max="10" step="1" list="rangeEspresso" id="rangeEspresso">
+        <div class="col-product" >
+            <div class="product__card" data-id="1">
+                <center>
+                    <div class="image-wrapper">
+<!--                        <img class="image-shadow" src="{% static 'core/img/choco.jpg' %}">-->
+                        <img class="image-real" src="{% static 'core/img/choco.png' %}" alt="choco">
                     </div>
-                </div>
+                </center>
 
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <img src="{% static 'core/img/latte.jpg' %}" alt="latte"><br>
-                        <label for="rangeLatte">Latte</label><br>
-                        <input type="number" min="0" max="10" id="rangeLatte">
+
+                <div class="descriprion-wrapper">
+                    <p class="product-name">CHOCO DONUT</p>
+                    <p class="product-description">Topped with a chocolate glaze, these
+                        donuts are perfect for breakfast or a sweet afternoon snack.</p>
+                </div>
+                <div class="price">
+                    <div class="counter-wrapper">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
                     </div>
+                    <p>100₽</p>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <img src="{% static 'core/img/cappuccino.jpg' %}" alt="cuppuccino"><br>
-                        <label for="rangeCappuccino">Cappuccino</label><br>
-                        <input type="number" min="0" max="10" id="rangeCappuccino">
-                    </div>
+                <div class="add-to-cart">
+                    <button>ADD TO MY CART</button>
                 </div>
-
             </div>
+        </div>
 
-            <div class="row mt-3">
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <img src="{% static 'core/img/choco.jpg' %}" alt="choco"><br>
-                        <label for="rangeChoco">Chocolate</label><br>
-                        <input type="number" min="0" max="10" id="rangeChoco">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <img src="{% static 'core/img/berry.jpg' %}" alt="berry"><br>
-                        <label for="rangeBerry">Berry</label><br>
-                        <input type="number" min="0" max="10" id="rangeBerry">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <img src="{% static 'core/img/mint.jpg' %}" alt="mint"><br>
-                        <label for="rangeMint">Mint</label><br>
-                        <input type="number" min="0" max="10" id="rangeMint">
-                    </div>
-                </div>
-
-            </div>
-            <br>
-
-            <button type="submit" class="btn btn-outline-info">Make an order</button>
-        </center>
     </div>
+
+</div>
 
 {% endblock %}

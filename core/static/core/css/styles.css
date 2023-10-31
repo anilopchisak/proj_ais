@@ -1,14 +1,31 @@
-body {
+html, body {
     background: whitesmoke;
     font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-    font-size: 32px;
-    color: darkred;
+    font-size: 16px;
+    color: #573636FF;
     font-weight: 500;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-logo {
+    width: 100%; /*ширина меню*/
+    height: auto; /*высота меню*/
+    padding: 27px;
+    user-select: none; /*запрет на выделение текста*/
+}
+
+.navbar-logo .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar {
     width: 100%; /*ширина меню*/
     height: auto; /*высота меню*/
+    background-color: #dcd7d7;
+    user-select: none;
 }
 
 .navbar .container {
@@ -17,20 +34,39 @@ body {
     justify-content: center;
 }
 
-.navbar_logo {
+.logo img {
+    width: auto;
+    height: 57px;
+}
+
+.logo {
     display: flex;
 }
 
 .navbar-brand {
     font-size: 50px;
+    font-weight: 600;
     text-decoration: none;
-    color: #a2462c;
+    color: #573636FF;
     letter-spacing: 7px;
-    transition: all .8ms ease-in-out;
+    transition: all .1s ease-in-out;
+    margin-right: 0;
+    padding-left: 7px;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+    border-radius: 20px;
 }
 
 .navbar-brand:hover {
-    background-image: linear-gradient(45deg, #ff1407, #ff8000, #37ff00, #0000CD, #4B0082);
+    background: -webkit-linear-gradient(45deg, #ff1407, #ff8000, #37ff00, #0000CD, #4B0082);
+    /*color: whitesmoke;*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*-webkit-text-stroke: 5px whitesmoke;*/
+    -webkit-background-image: linear-gradient(45deg, #ff1407, #ff8000, #37ff00, #0000CD, #4B0082);
+}
+.navbar-brand:focus-visible {
+    outline-color: #cecece;
 }
 
 .navbar-menu {
@@ -39,116 +75,402 @@ body {
     margin-bottom: 0;
 }
 
-.navbar-menu li {
+.menu ul {
+    padding: 0px;
+}
+
+.menu li {
     display: inline-block; /*чтобы элементы меню были в линию*/
+    margin-right: 15px;
     margin-left: 15px;
     margin-top: 10px;
+    font-size: 21px;
+    opacity: 0.9; /*прозрачность пунктов меню*/
 }
 
-.navbar-menu li a { /*настройка пунктов меню, самих надписей*/
-    display: inline-block; /*чтобы элементы меню были в линию*/
+.menu-item { /*настройка пунктов меню, самих надписей*/
     color: #0D0D0D;
-    font-weight: 500;
-    font-size: 18px;
-    opacity: 0.7; /*прозрачность пунктов меню*/
+    /*padding-left: 15px; !*расстояние между пунктами меню*!*/
+    background-color: #dcd7d7;
     text-decoration: none;
-    padding: 10px; /*расстояние между пунктами меню*/
-    transition: all .1s ease-in-out; /*плавно изменяется при наведении*/
-}
-
-.btn-outline-info { /*настройка пунктов меню, самих надписей*/
-    border-color:  #c42020;
-    color:  #c42020;
+    height: 35px;
+    width: auto;
+    border: 0px;
     border-radius: 20px;
-    font-size: 23px;
+    transition: all .1s ease-in-out; /*плавно изменяется при наведении*/
+    cursor: pointer;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
 }
 
-.btn-outline-info:hover { /*эффекты при наведении на пункты меню*/
-    background-color:  #c42020;
-    border-color:  #c42020;
-    color: #fff;
+.menu-item:hover { /*настройка пунктов меню, самих надписей*/
+    color: whitesmoke;
+    text-shadow: 1px 0 0 currentColor;
+    background-color: rgba(87, 54, 54, 0.67);
+}
+.menu-item:focus-visible {
+    outline-color: whitesmoke;
 }
 
-h4 {
-    color: #a2462c;
-    font-size: 41px;
-    font:
-
-}
-
-h1 {
-    color: #0D0D0D;
-}
-
-h2 {
-    font-size: 23px;
-    font: roboto;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 18px;
-    font: roboto;
-}
-
-.animal { /*-container*/
-    margin-bottom: 30px;
-    margin-right: 30px;
-    position: relative;
-    width: 100%;
-    transition: all .8ms ease-in-out;
-}
-
-.animal:hover { }
-
-.animal:hover .image { }
-
-.animal .info a {
-    font-size: 30px;
-    color: #a2462c;
-}
-
-.animal:hover .info a {
+.cart {
+    font-weight: 600;
     background-image: linear-gradient(45deg, #ff1407, #ff8000, #37ff00, #0000CD, #4B0082);
-    color: #f3edec;
-    font-size: 32px;
-}
-
-.image {
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-
-.image img {
-    height: 100%;
-    width: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.info a {
+    color: whitesmoke;
     text-decoration: none;
-    color: #0D0D0D;
-    transition: all .8ms ease-in-out;
-    margin-left: 8%;
-    font-size: 20px;
+    border-radius: 20px;
+    width: auto;
+    height: 35px;
+    border: 0;
+    transition: background-image .2s ease-in-out; /*плавно изменяется при наведении*/
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
 }
 
-.list-container {
+.cart:hover{
+    background-image: linear-gradient(75deg, #ff1407, #ff8000, #37ff00, #0000CD, #4B0082);
+}
+
+.cart:focus-visible {
+    outline-color: whitesmoke;
+}
+
+
+/*modal window*/
+
+.modal {
+    display: none; /*flex*/
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer; /*подсказка что можно закрыть окно кликом где угодно*/
+    overflow-y: auto; /*скролл модального окна на телефоне*/
+}
+
+.modal__main {
+    position: relative;
+    width: 400px;
+    background-color: whitesmoke;
     margin-left: auto;
-    margin-right: auto;
-    width: auto;
+    color: #0D0D0D;
     padding: 30px;
-    margin-top: 3%;
-    background: transparent;
+    cursor: default;
+}
+
+.modal__title {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.modal__container {
+    position: relative;
+    padding-bottom: 20px;
+    height: 90%
+}
+
+.modal__close {
+    position: absolute;
+    background-color: transparent;
+
+    color: whitesmoke;
+    font-size: 30px;
+
+    border: none;
+    border-radius: 100px;
+
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    top: 45%;
+    right: 415px;
+    text-align: center;
+
+    transition: background-color .2s ease-in-out, transform 0.5s; /*плавно изменяется при наведении*/
+    cursor: pointer;
+    /*если нажмем TAB то будет какое то выделение - настраиваем его*/
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+}
+
+.modal__close:focus-visible {
+    outline-color: whitesmoke;
+}
+
+.modal__close:hover {
+    background-color: rgba(183, 183, 183, 0.5);
+    transform: scale(110%);
+}
+
+/* modal window - alert cart is empty*/
+
+.alert__emptyCart {
+    text-align: center;
+    padding-top: 40%;
+}
+.alert__img img {
+    width: 250px;
+    height: auto;
+}
+.alert__emptyCart h3{
+    margin-top: 15px;
+}
+
+/* modal window - card product */
+
+.cart-item__top {
+	display: flex;
+    width: 100%;
+	/*align-items: flex-start;*/
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dee2e6;
+	margin-bottom: 15px;
+}
+
+.cart-item__top img {
+	width: 100px;
+	height: auto;
+}
+
+.cart-item__desc {
+	padding-top: 15px;
+	padding-left: 15px;
+    width: 100%;
+}
+
+.cart-item__title {
+	font-size: 21px;
+    line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+/*.cart-item__details {*/
+/*	display: flex;*/
+/*    position: relative;*/
+/*    margin-top: 5px;*/
+/*    user-select: none; !*запрет на выделение текста*!*/
+/*    width: 100%;*/
+/*}*/
+
+.cart-item__desc .price {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
 }
 
-.form-group img {
-    height: 224px;
+.cart-item__desc .price .counter-wrapper {
+    position: relative;
+    margin-right: 5px;
+}
+
+.cart-item__desc .price p {
+	font-weight: 600;
+    font-size: 21px;
+    text-align: right;
+    margin-left: 10px;
+    padding-right: 20px;
+    position: relative;
+    padding-top: 7px;
+}
+
+/* modal window - bottom cart info */
+
+.bottomCart-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+.bottomCart-wrapper .cart {
+    font-size: 21px;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.cart-totalPrice {
+    margin-top: 300px;
+}
+
+/* modal window - product card */
+
+.cart-item__img img {
     width: auto;
+    height: 100px;
 }
 
+
+
+/*index.html*/
+
+.container-products{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.donuts-par {
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.col-product {
+    width: 270px;
+    height: 500px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.card {
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.image-wrapper {
+    height: 200px;
+    user-select: none; /*запрет на выделение текста*/
+}
+
+.image-real {
+    position: relative;
+    width: auto;
+    height: 200px;
+    /*z-index: 2;*/
+    border-radius: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+/*.image-shadow {*/
+/*    position: absolute;*/
+/*    border-radius: 10px;*/
+/*    width: 180px;*/
+/*    margin-top: 10px;*/
+/*    margin-left: 10px;*/
+/*}*/
+
+.col-product:hover { }
+.col-product:hover .image-real {
+    /*position: absolute;*/
+    /*z-index: 1;*/
+    /*border-radius: 10px;*/
+    /*width: 180px;*/
+    /*filter: blur(20px) brightness(3) saturate(2);*/
+    transform: scale(105%);
+}
+
+.descriprion-wrapper {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 30px;*/
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-description{
+    height: 125px;
+}
+
+.price{
+    display: flex;
+    position: relative;
+    margin-top: 5px;
+    user-select: none; /*запрет на выделение текста*/
+}
+
+.counter-wrapper {
+    position: absolute;
+	background: #dcd7d7;
+	border-radius: 20px;
+	width: 120px;
+	display: flex;
+	height: 30px;
+	overflow: hidden;
+    transform: translate(0, +25%);
+    font-size: 18px;
+    user-select: none;
+}
+.items__control {
+    width: 40px;
+	cursor: pointer;
+    transition: background-color .1s ease-in-out; /*плавно изменяется при наведении*/
+	text-align: center;
+}
+.items__control:hover {
+    background-color: #c7c3c3;
+}
+.items__current {
+    width: 40px;
+    text-align: center;
+}
+
+.price p {
+    font-weight: 900;
+    width: 90px;
+    font-size: 21px;
+    text-align: right;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-top: 7px;
+}
+
+/*.add-to-cart {*/
+/*    background: linear-gradient(whitesmoke, whitesmoke, whitesmoke, whitesmoke) padding-box,*/
+/*                linear-gradient(75deg, #ff1407, #ff8000, #37ff00, #0000CD, #4B0082) border-box;*/
+/*    position: relative;*/
+/*    border-radius: 20px;*/
+/*    border: 8px solid transparent;*/
+/*    width: auto;*/
+/*    height: 70px;*/
+/*    transition: all .8ms ease-in-out;*/
+/*    font-size: 40px;*/
+/*    margin-top: 10px;*/
+/*}*/
+
+.add-to-cart{
+    font-size: 18px;
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.add-to-cart button {
+    user-select: none; /*запрет на выделение текста*/
+    font-weight: 600;
+    background-color: whitesmoke;
+    /*background-image: linear-gradient(45deg, #ff1407, #ff8000, #37ff00, #0000CD, #4B0082);*/
+    color: #0D0D0D;
+    text-decoration: none;
+    border-radius: 20px;
+    width: auto;
+    height: 35px;
+    border: 0;
+    transition: background-color .1s ease-in-out, color .1s ease-in-out; /*плавно изменяется при наведении*/
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+}
+
+.add-to-cart button:hover{
+    /*background-image: linear-gradient(75deg, #ff1407, #ff8000, #37ff00, #0000CD, #4B0082);*/
+    /*color: whitesmoke;*/
+    color: whitesmoke;
+    background-color: rgba(87, 54, 54, 0.67);
+}
+.add-to-cart button:focus-visible {
+    outline-color: #cecece;
+}
