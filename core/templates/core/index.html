@@ -8,61 +8,57 @@
 
     <div class="row">
 
-        <div class="col-product">
-            <div class="product__card" data-id="0">
-                <center>
-                    <div class="image-wrapper">
+        <div class="col-product" data-id="0">
+            <center>
+                <div class="image-wrapper">
 <!--                        <img class="image-shadow" src="{% static 'core/img/berry.png' %}">-->
-                        <img class="image-real" src="{% static 'core/img/berry.png' %}" alt="berry">
-                    </div>
-                </center>
+                    <img class="image-real" src="{% static 'core/img/berry.png' %}" alt="berry">
+                </div>
+            </center>
 
-                <div class="descriprion-wrapper">
-                    <p class="product-name">BERRY DONUT</p>
-                    <p class="product-description">Bright pink donut with mixed berry filling.
-                        The taste of ripe berries will awaken a feeling of joy and carefreeness.</p>
-                </div>
-                <div class="price">
-                    <div class="counter-wrapper">
-                        <div class="items__control" data-action="minus">-</div>
-                        <div class="items__current" data-counter>1</div>
-                        <div class="items__control" data-action="plus">+</div>
-                    </div>
-                    <p>100₽</p>
-                </div>
-                <div class="add-to-cart">
-                    <button href="#">ADD TO MY CART</button>
-                </div>
+            <div class="description-wrapper">
+                <p class="product-name">BERRY DONUT</p>
+                <p class="product-description">Bright pink donut with mixed berry filling.
+                    The taste of ripe berries will awaken a feeling of joy and carefreeness.</p>
             </div>
+            <div class="price">
+                <div class="counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div data-counter class="items__current">1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                </div>
+                <p class="price_value">100₽</p>
+            </div>
+            <center>
+                <button data-cart class="add-to-cart">ADD TO MY CART</button>
+            </center>
         </div>
 
-        <div class="col-product" >
-            <div class="product__card" data-id="1">
-                <center>
-                    <div class="image-wrapper">
+        <div class="col-product" data-id="1">
+            <center>
+                <div class="image-wrapper">
 <!--                        <img class="image-shadow" src="{% static 'core/img/choco.jpg' %}">-->
-                        <img class="image-real" src="{% static 'core/img/choco.png' %}" alt="choco">
-                    </div>
-                </center>
+                    <img class="image-real" src="{% static 'core/img/choco.png' %}" alt="choco">
+                </div>
+            </center>
 
 
-                <div class="descriprion-wrapper">
-                    <p class="product-name">CHOCO DONUT</p>
-                    <p class="product-description">Topped with a chocolate glaze, these
-                        donuts are perfect for breakfast or a sweet afternoon snack.</p>
-                </div>
-                <div class="price">
-                    <div class="counter-wrapper">
-                        <div class="items__control" data-action="minus">-</div>
-                        <div class="items__current" data-counter>1</div>
-                        <div class="items__control" data-action="plus">+</div>
-                    </div>
-                    <p>100₽</p>
-                </div>
-                <div class="add-to-cart">
-                    <button>ADD TO MY CART</button>
-                </div>
+            <div class="description-wrapper">
+                <p class="product-name">CHOCO DONUT</p>
+                <p class="product-description">Topped with a chocolate glaze, these
+                    donuts are perfect for breakfast or a sweet afternoon snack.</p>
             </div>
+            <div class="price">
+                <div class="counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div data-counter class="items__current" >1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                </div>
+                <p class="price_value">100₽</p>
+            </div>
+            <center>
+                <button data-cart class="add-to-cart">ADD TO MY CART</button>
+            </center>
         </div>
 
     </div>
