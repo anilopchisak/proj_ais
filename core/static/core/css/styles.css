@@ -188,7 +188,7 @@ html, body {
 
     padding-left: 11px;
     padding-right: 11px;
-    padding-top: 8px;
+    padding-top: 4px;
     padding-bottom: 5px;
     top: 45%;
     right: 515px;
@@ -229,6 +229,7 @@ html, body {
 /* modal window - card product */
 
 .cart-item {
+    font-size: 18px;
 	display: flex;
     width: 100%;
 	/*align-items: flex-start;*/
@@ -249,7 +250,6 @@ html, body {
 }
 
 .cart-item__title {
-	font-size: 21px;
     line-height: 1.2;
 	font-weight: 600;
 	margin-bottom: 5px;
@@ -289,7 +289,7 @@ html, body {
 /*}*/
 
 .cart-item__desc .price {
-    display: flex;
+     display: flex;
 }
 
 .cart-item__desc .price .counter-wrapper {
@@ -301,8 +301,8 @@ html, body {
 	font-weight: 600;
     font-size: 21px;
     text-align: right;
-    margin-left: 10px;
-    padding-right: 20px;
+    margin-left: auto;
+    padding-right: 30px;
     position: relative;
     padding-top: 7px;
 }
@@ -315,28 +315,36 @@ html, body {
 
 /* modal window - bottom cart info */
 
+.cart-totalPrice {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    border-top: 1px solid #dee2e6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+}
+.cart-totalPrice .total {
+    margin-left: auto;
+}
+
 .orderForm {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
-
 .orderForm .cart {
     font-size: 21px;
-    margin-top: 20px;
+    margin-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
 }
-
 .orderForm p {
-    font-size: 21px;
+    padding-top: 10px;
+    font-size: 20px;
 }
-
-.cart-totalPrice {
-    margin-top: 20px;
-    font-weight: 600;
-}
-
 .form-group {
     margin-top: 10px;
 }

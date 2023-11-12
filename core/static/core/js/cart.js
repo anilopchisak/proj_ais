@@ -1,8 +1,7 @@
-
 // находим Div внутри корзины, в который мы добавляем товары
 const cartWrapper = document.querySelector('.cart-wrapper');
 // Находим модальное окно
-const modalCart = document.querySelector('.modal');
+// const modalCart = document.querySelector('.modal');
 
 // Отслеживаем клик на странице
 window.addEventListener('click', function(event) {
@@ -63,6 +62,11 @@ window.addEventListener('click', function(event) {
 
         // Отображение статуса корзины Пустая / Полная
         toggleCartStatus();
+
+        modalCart.style.visibility = 'visible';
+        // Подсчет общей стоимости товаров в корзине
+        calcCartPrice();
+        modalCart.style.visibility = 'hidden';
     }
 
 

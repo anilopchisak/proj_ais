@@ -57,10 +57,13 @@
 
                     <div class="d-none orderForm">
                         <div class="cart-totalPrice">
-                            <p><span class="h5">Total cost:</span>
-                                <span class="total-price">100</span>
-                                <span class="rouble">₽</span></p>
+                            <div class="h5">Total cost:</div>
+                            <div class="total">
+                                <span class="total-price">0</span>
+                                <span class="rouble">₽</span>
+                            </div>
                         </div>
+
                         <p>Make an order</p>
                         <div class="form-group">
                             <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter your email">
@@ -84,6 +87,7 @@
         {% endblock %}
 
         <script src="{% static 'core/js/modal.js' %}"></script>
+        <script src="{% static 'core/js/calcCartPrice.js' %}"></script>
         <script src="{% static 'core/js/toggleCartStatus.js' %}"></script>
         <script src="{% static 'core/js/counter.js' %}"></script>
         <script src="{% static 'core/js/cart.js' %}"></script>
