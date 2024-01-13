@@ -4,64 +4,44 @@
 
 <div class="container-products">
 
-    <h1 class="donuts-par" href="#">DONUTS</h1>
+    <CENTER>
+        <h1 class="title_product_type" href="#">MENU</h1>
+    </CENTER>
+
 
     <div class="row">
+        {% for product in products %}
+            <div class="col-product" data-id="{{ product.id }}">
+                <center>
+                    <div class="image-wrapper">
+    <!--                        <img class="image-shadow" src="{% static 'core/img/berry.png' %}">-->
+                        <img class="image-real" src="{{product.img.url}}" alt="{{product.product_name}}">
+                    </div>
+                </center>
 
-        <div class="col-product" data-id="0">
-            <center>
-                <div class="image-wrapper">
-<!--                        <img class="image-shadow" src="{% static 'core/img/berry.png' %}">-->
-                    <img class="image-real" src="{% static 'core/img/berry.png' %}" alt="berry">
+                <div class="description-wrapper">
+                    <p class="product-name">{{product.product_name}}</p>
+                    <p class="product-description">{{product.description}}</p>
                 </div>
-            </center>
-
-            <div class="description-wrapper">
-                <p class="product-name">BERRY DONUT</p>
-                <p class="product-description">Bright pink donut with mixed berry filling.
-                    The taste of ripe berries will awaken a feeling of joy and carefreeness.</p>
-            </div>
-            <div class="price">
-                <div class="counter-wrapper">
-                    <div class="items__control" data-action="minus">-</div>
-                    <div data-counter class="items__current">1</div>
-                    <div class="items__control" data-action="plus">+</div>
+                <div class="price">
+                    <div class="counter-wrapper">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div data-counter class="items__current">1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                    </div>
+                    <p class="price_value">
+                        <span>{{product.final_cost}}</span>
+                        <span>$</span>
+                    </p>
                 </div>
-                <p class="price_value">100$</p>
+                <center>
+                    <button data-cart class="add-to-cart">ADD TO MY CART</button>
+                </center>
             </div>
-            <center>
-                <button data-cart class="add-to-cart">ADD TO MY CART</button>
-            </center>
-        </div>
-
-        <div class="col-product" data-id="1">
-            <center>
-                <div class="image-wrapper">
-<!--                        <img class="image-shadow" src="{% static 'core/img/choco.jpg' %}">-->
-                    <img class="image-real" src="{% static 'core/img/choco.png' %}" alt="choco">
-                </div>
-            </center>
-
-
-            <div class="description-wrapper">
-                <p class="product-name">CHOCO DONUT</p>
-                <p class="product-description">Topped with a chocolate glaze, these
-                    donuts are perfect for breakfast or a sweet afternoon snack.</p>
-            </div>
-            <div class="price">
-                <div class="counter-wrapper">
-                    <div class="items__control" data-action="minus">-</div>
-                    <div data-counter class="items__current" >1</div>
-                    <div class="items__control" data-action="plus">+</div>
-                </div>
-                <p class="price_value">100$</p>
-            </div>
-            <center>
-                <button data-cart class="add-to-cart">ADD TO MY CART</button>
-            </center>
-        </div>
-
+        {% endfor %}
     </div>
+
+
 
 </div>
 

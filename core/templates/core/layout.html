@@ -29,9 +29,8 @@
             <div class="container">
                 <div class="menu">
                     <ul>
-                        <li><button class="menu-item" href="#">DONUTS</button></li>
-                        <li><button class="menu-item" href="#">COFFEE</button></li>
-                        <li><button class="menu-item" href="#">ORDER ARCHIVE</button></li>
+                        <li><a type="button" class="menu-item" href="..">MENU</a></li>
+                        <li><a type="button" class="menu-item" href="../order_archive">ORDER ARCHIVE</a></li>
                         <li><button class="cart">CART</button></li>
                     </ul>
                 </div>
@@ -60,20 +59,24 @@
                             <div class="h5">Total cost:</div>
                             <div class="total">
                                 <span class="total-price">0</span>
-                                <span class="rouble">₽</span>
+                                <span class="rouble">$</span>
                             </div>
                         </div>
 
                         <p>Make an order</p>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
-                        </div>
-                        <center>
-                            <button class="cart">CHECKOUT</button>
-                        </center>
+                        <form>
+<!--                            {% csrf_token %}-->
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                            </div>
+                            <center>
+                                <button type="submit" class="cart">CHECKOUT</button>
+                            </center>
+                        </form>
+
                     </div>
 
 

@@ -11,7 +11,7 @@ function calcCartPrice() {
         // Находим количество товара
         const amountEl = item.closest('.cart-item').querySelector('[data-counter]');
         // Добавляем стоимость товара в общую стоимость (кол-во * цену)
-        totalPrice += parseInt(item.innerText) * parseInt(amountEl.innerText);
+        totalPrice += parseFloat(item.innerText) * parseFloat(amountEl.innerText);
         console.log(totalPrice);
     });
 

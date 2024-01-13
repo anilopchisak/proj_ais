@@ -166,14 +166,15 @@ html, body {
 }
 
 .modal__container {
-    position: relative;
-    padding-bottom: 20px;
-    height: 90%
+    margin-bottom: 40px;
 }
 
 .cart-wrapper {
-    max-height: 85%;
+    position: fixed;
+    margin-bottom: 10px;
+    max-height: 50%;
     overflow-y: auto;
+    /*position: relative;*/
 }
 
 .modal__close {
@@ -236,6 +237,7 @@ html, body {
 	padding-bottom: 15px;
 	border-bottom: 1px solid #dee2e6;
 	margin-bottom: 15px;
+    position: relative;
 }
 
 .cart-item img {
@@ -301,8 +303,8 @@ html, body {
 	font-weight: 600;
     font-size: 21px;
     text-align: right;
-    margin-left: auto;
-    padding-right: 30px;
+    margin-left: 50px;
+    padding-right: 7px;
     position: relative;
     padding-top: 7px;
 }
@@ -317,8 +319,9 @@ html, body {
 
 .cart-totalPrice {
     display: flex;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    /*position: relative;*/
+    /*margin-top: auto;*/
+    margin-bottom: 20px;
     font-weight: 600;
     font-size: 18px;
     border-top: 1px solid #dee2e6;
@@ -331,9 +334,10 @@ html, body {
 }
 
 .orderForm {
-    position: absolute;
+    position: fixed;
+    margin-bottom: 10px;
     bottom: 0;
-    width: 100%;
+    width: 450px;
 }
 .orderForm .cart {
     font-size: 21px;
@@ -352,7 +356,7 @@ html, body {
 /* modal window - product card */
 
 .cart-item__img img {
-    width: auto;
+    width: 100px;
     height: 100px;
 }
 
@@ -368,20 +372,24 @@ html, body {
     /*margin-bottom: 50px;*/
 }
 
-.donuts-par {
+.title_product_type {
     font-weight: 600;
-    font-size: 23px;
+    font-size: 32px;
 }
 
 .row {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
+    width:1675px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .col-product {
-    width: 270px;
-    height: 500px;
-    margin-right: 25px;
-    margin-bottom: 25px;
+    width: 300px;
+    height: 570px;
+    margin-right: 35px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .card {
@@ -397,7 +405,7 @@ html, body {
 
 .image-real {
     position: relative;
-    width: auto;
+    width: 200px;
     height: 200px;
     /*z-index: 2;*/
     border-radius: 10px;
@@ -431,12 +439,13 @@ html, body {
 }
 
 .product-name {
+    text-transform: uppercase;
     font-size: 20px;
     font-weight: 600;
 }
 
 .product-description{
-    height: 125px;
+    height: 180px;
     font-size: 18px;
 }
 
@@ -531,4 +540,13 @@ html, body {
 }
 .add-to-cart:focus-visible {
     outline-color: #cecece;
+}
+
+
+.col_1 {
+    width: 300px;
+}
+
+.col_2 {
+    width: auto;
 }
